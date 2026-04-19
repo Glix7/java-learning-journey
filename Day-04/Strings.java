@@ -1,8 +1,9 @@
-public class String {
+public class Strings {
     public static void main(String[] args) {
+        
         // ========== 1. String Declaration and Initialization ==========
-        java.lang.String name = "Java";
-        java.lang.String message = new java.lang.String("Hello World");
+        String name = "Java";
+        String message = new String("Hello World");
         
         System.out.println("=== String Basics ===");
         System.out.println("Name: " + name);
@@ -10,13 +11,13 @@ public class String {
         
         // ========== 2. String Length ==========
         System.out.println("\n=== String Length ===");
-        java.lang.String text = "Learning Java";
+        String text = "Learning Java";
         System.out.println("Text: " + text);
         System.out.println("Length: " + text.length());
         
         // ========== 3. String Methods ==========
         System.out.println("\n=== String Methods ===");
-        java.lang.String str = "Hello Java";
+        String str = "Hello Java";
         
         // Case conversion
         System.out.println("Original: " + str);
@@ -33,7 +34,7 @@ public class String {
         
         // ========== 4. String Searching ==========
         System.out.println("\n=== String Searching ===");
-        java.lang.String sentence = "Java is great and Java is powerful";
+        String sentence = "Java is great and Java is powerful";
         
         // indexOf - first occurrence
         System.out.println("First 'Java' index: " + sentence.indexOf("Java"));
@@ -48,10 +49,10 @@ public class String {
         
         // ========== 5. String Comparison ==========
         System.out.println("\n=== String Comparison ===");
-        java.lang.String str1 = "Hello";
-        java.lang.String str2 = "Hello";
-        java.lang.String str3 = new java.lang.String("Hello");
-        java.lang.String str4 = "hello";
+        String str1 = "Hello";
+        String str2 = "Hello";
+        String str3 = new String("Hello");
+        String str4 = "hello";
         
         // equals - content comparison (case sensitive)
         System.out.println("str1.equals(str2): " + str1.equals(str2));
@@ -68,7 +69,7 @@ public class String {
         
         // ========== 6. String Replacement ==========
         System.out.println("\n=== String Replacement ===");
-        java.lang.String original = "The quick brown fox jumps";
+        String original = "The quick brown fox jumps";
         
         // replace - replace all occurrences
         System.out.println("Original: " + original);
@@ -76,21 +77,21 @@ public class String {
         System.out.println("Replace 'o' with '0': " + original.replace("o", "0"));
         
         // replaceAll - using regex
-        java.lang.String numbers = "Java 123 Programming 456";
+        String numbers = "Java 123 Programming 456";
         System.out.println("Original: " + numbers);
         System.out.println("Replace digits: " + numbers.replaceAll("[0-9]", "X"));
         
         // ========== 7. String Trimming ==========
         System.out.println("\n=== String Trimming ===");
-        java.lang.String withSpaces = "   Hello World   ";
+        String withSpaces = "   Hello World   ";
         System.out.println("Original: '" + withSpaces + "'");
         System.out.println("After trim(): '" + withSpaces.trim() + "'");
         
         // ========== 8. String Splitting ==========
         System.out.println("\n=== String Splitting ===");
-        java.lang.String csv = "Apple,Banana,Cherry,Date";
+        String csv = "Apple,Banana,Cherry,Date";
         System.out.println("Original: " + csv);
-        java.lang.String[] fruits = csv.split(",");
+        String[] fruits = csv.split(",");
         System.out.println("Split by comma:");
         for (int i = 0; i < fruits.length; i++) {
             System.out.println("  [" + i + "] " + fruits[i]);
@@ -98,8 +99,8 @@ public class String {
         
         // ========== 9. String Joining ==========
         System.out.println("\n=== String Joining ===");
-        java.lang.String[] colors = {"Red", "Green", "Blue"};
-        java.lang.String joined = java.lang.String.join(" - ", colors);
+        String[] colors = {"Red", "Green", "Blue"};
+        String joined = String.join(" - ", colors);
         System.out.println("Joined: " + joined);
         
         // ========== 10. StringBuilder (for mutable strings) ==========
@@ -123,17 +124,17 @@ public class String {
         double decimal = 3.14;
         boolean flag = true;
         
-        java.lang.String numStr = java.lang.String.valueOf(number);
-        java.lang.String decStr = java.lang.String.valueOf(decimal);
-        java.lang.String boolStr = java.lang.String.valueOf(flag);
+        String numStr = String.valueOf(number);
+        String decStr = String.valueOf(decimal);
+        String boolStr = String.valueOf(flag);
         
-        System.out.println("Number to String: " + numStr);
+        System.out.println("Number to String: " + numStr + " (type: " + numStr.getClass().getSimpleName() + ")");
         System.out.println("Double to String: " + decStr);
         System.out.println("Boolean to String: " + boolStr);
         
         // ========== 12. Check String Properties ==========
         System.out.println("\n=== String Properties ===");
-        java.lang.String checkStr = "Hello123";
+        String checkStr = "Hello123";
         
         // Check if empty
         System.out.println("isEmpty: " + checkStr.isEmpty());
